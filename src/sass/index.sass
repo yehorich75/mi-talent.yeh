@@ -14,14 +14,17 @@ body
 header.header
 	.header-container
 		display: grid
-		grid-template-rows: repeat(8, 111px)
-		grid-template-columns: repeat(17, 111px)
+		grid-template-rows: 1fr
+		grid-template-columns: repeat(17, 1fr)
 
 .main-menu
 	display: flex
 	justify-content: space-between
 	list-style: none
-	grid-column: 4 / 7
+	grid-column: 1 / 4
+	grid-row: 1
+	align-items: flex-end
+	padding-right: 58px
 	li
 		a.hamb
 			img
@@ -33,4 +36,12 @@ header.header
 			text-decoration: none
 			font-weight: 700
 			font-size: 14px
+
+.hero
+	&-container
+		display: grid
+		grid-template-rows: repeat(8, 1fr)
+		grid-template-columns: repeat(17, 1fr)
+
+.hero-image
 
