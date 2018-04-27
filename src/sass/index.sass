@@ -8,6 +8,9 @@ $color-olive: #c4dbdb
 *
 	box-sizing: border-box
 
+body
+	font-family: 'Nunito', sans-serif
+
 header.header
 	.header-container
 		display: grid
@@ -15,7 +18,10 @@ header.header
 		grid-template-columns: repeat(17, 111px)
 
 .main-menu
+	display: flex
+	justify-content: space-between
 	list-style: none
+	grid-column: 4 / 7
 	li
 		a.hamb
 			img
@@ -25,7 +31,6 @@ header.header
 			color: #1c1c1c
 			text-transform: uppercase
 			text-decoration: none
-			font-family: 'Nunito', sans-serif
 			font-weight: 700
 			font-size: 14px
 
