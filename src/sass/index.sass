@@ -11,21 +11,37 @@ $color-olive: #c4dbdb
 body
 	font-family: 'Nunito', sans-serif
 
+.grid
+	display: grid
+	grid-template-rows: 9fr
+	grid-template-columns: repeat(17, 1fr)
+
 header.header
+	grid-row: 1
+	grid-column: 1 / span 17
 	.header-container
 		display: grid
 		grid-template-rows: 1fr
-		grid-template-columns: repeat(17, 1fr)
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-areas: "a a b b c c"
+		padding-top: 67px
+		padding-bottom: 174px
+		nav 
+			display: none
+		.logo
+			grid-area: "b"
+		.header-icons
+			grid-area: "c"
+
 
 .main-menu
-	display: flex
-	justify-content: space-between
 	list-style: none
-	grid-column: 1 / 4
+	grid-column: 1
 	grid-row: 1
-	align-items: flex-end
-	padding-right: 58px
+	display: flex
+	justify-content: start
 	li
+		padding-right: 58px
 		a.hamb
 			img
 				width: 20px
@@ -37,11 +53,34 @@ header.header
 			font-weight: 700
 			font-size: 14px
 
-.hero
-	&-container
-		display: grid
-		grid-template-rows: repeat(8, 1fr)
-		grid-template-columns: repeat(17, 1fr)
+.logo
+	justify-self: center
 
-.hero-image
+.header-icons
+	justify-self: end 
+
+#menu-checkbox
+	display: none
+
+.hero
+	grid-row: 2 / span 8
+	grid-column: 1 / span 17
+	.hero-container
+		display: grid
+		grid-template-columns: repeat(10, 1fr)
+		grid-template-areas: "a a b b b b b b b c"
+		position: relative
+		align-items: center
+		.hero-image
+			grid-area: b
+			background: #cbcfd0
+		h1 
+			display: block
+			font-size: 101px
+			font-family: "Poppins", sans-serif
+			font-weight: 500
+			grid-column: 2 / span 5
+			position: absolute
+			left: 80px
+
 
