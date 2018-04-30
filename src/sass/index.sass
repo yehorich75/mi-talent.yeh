@@ -72,8 +72,9 @@ header.header
 		position: relative
 		align-items: center
 		.hero-image
-			grid-area: b
 			background: #cbcfd0
+			grid-row: 1 / span 10
+			grid-column: b
 		h1 
 			display: block
 			font-size: 101px
@@ -82,5 +83,10 @@ header.header
 			grid-column: 2 / span 5
 			position: absolute
 			left: 80px
+		.hero-video__button
+			background: $color-olive
+			grid-row: 8 / span 10
+			grid-column: 1 / span 3
+			height: 130px
 
 
